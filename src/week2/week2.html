@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./week2-js.js"></script>
+    <title>Week2 - Accordion Button</title>
+  </head>
+  <body>
+    <h1>Accordion Button</h1>
+
+    <main>
+      <div class="accordion-container">
+        <div class="accordion-wrapper">
+          <div class="contents-box">
+            <div class="contents-header" tabindex="0" role="button" aria-expanded="false" aria-controls="contents1">
+              <p>
+                <span aria-hidden="true">Q</span>
+                <span>3D 카탈로그는 기존 제품 이미지나 영상과 뭐가 다른가요?</span>
+              </p>
+              <span class="header-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.33335 9.33334L22.6667 22.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.6667 9.33334V22.6667H9.33335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="sr-only">답변 보기</span>
+            </div>
+            <div class="contents" id="contents1" hidden>
+              <p>
+                <span aria-hidden="true">A</span>
+                <span class="content-answer"
+                  >3D 카탈로그는 단순히 제품을 '보여주는' 것을 넘어, 고객이 직접 제품을 회전시키고 확대·축소하면서 '체험'할 수 있는 형태입니다. <br />
+                  정지된 이미지나 일방향 영상과 달리, 제품의 구조나 디테일을 입체적으로 이해할 수 있어 설명 없이도 설득이 가능합니다.
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="contents-box">
+            <div class="contents-header" tabindex="0" role="button" aria-expanded="false" aria-controls="contents2">
+              <p>
+                <span aria-hidden="true">Q</span>
+                <span>우리 제품이 복잡한 기계인데, 3D화가 가능할까요?</span>
+              </p>
+              <span class="header-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.33335 9.33334L22.6667 22.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.6667 9.33334V22.6667H9.33335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="sr-only">답변 보기</span>
+            </div>
+            <div class="contents" id="contents2" hidden>
+              <p>
+                <span aria-hidden="true">A</span>
+                <span class="content-answer"> 가능합니다. CAD 도면, 실물 스캔, 또는 사진 기반 모델링 방식 등 다양한 방식으로 3D 구현이 가능하며, 복잡한 구조나 내부 분해 애니메이션까지도 제작이 가능합니다. </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="contents-box">
+            <div class="contents-header" tabindex="0" role="button" aria-expanded="false" aria-controls="contents3">
+              <p>
+                <span aria-hidden="true">Q</span>
+                <span>AR이나 VR 기술도 제공하시나요?</span>
+              </p>
+              <span class="header-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.33335 9.33334L22.6667 22.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.6667 9.33334V22.6667H9.33335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="sr-only">답변 보기</span>
+            </div>
+            <div class="contents" id="contents3" hidden>
+              <p>
+                <span aria-hidden="true">A</span>
+                <span class="content-answer">
+                  네, AR(증강현실)은 모바일 환경에서 제품을 실제 공간에 배치해보는 기능으로, 주로 마케팅과 판매에 활용됩니다.<br />
+                  VR(가상현실)은 몰입형 콘텐츠로, 가상 쇼룸, 전시 부스, 공간 체험 등에 주로 활용되며, 각각 목적에 맞게 개발해드립니다.
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="contents-box">
+            <div class="contents-header" tabindex="0" role="button" aria-expanded="false" aria-controls="contents4">
+              <p>
+                <span aria-hidden="true">Q</span>
+                <span>웹사이트에 3D 카탈로그를 연동할 수 있나요?</span>
+              </p>
+              <span class="header-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.33335 9.33334L22.6667 22.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.6667 9.33334V22.6667H9.33335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="sr-only">답변 보기</span>
+            </div>
+            <div class="contents" id="contents4" hidden>
+              <p>
+                <span aria-hidden="true">A</span>
+                <span class="content-answer"> 네, 웹브라우저에서 바로 실행 가능한 WebGL 기반 기술을 사용해 사이트 내에 3D 뷰어를 삽입하거나 별도 링크로 제공 가능합니다. 모바일, 태블릿 환경도 호환됩니다. </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="contents-box">
+            <div class="contents-header" tabindex="0" role="button" aria-expanded="false" aria-controls="contents5">
+              <p>
+                <span aria-hidden="true">Q</span>
+                <span>제작 기간은 얼마나 걸리나요?</span>
+              </p>
+              <span class="header-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.33335 9.33334L22.6667 22.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.6667 9.33334V22.6667H9.33335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="sr-only">답변 보기</span>
+            </div>
+            <div class="contents" id="contents5" hidden>
+              <p>
+                <span aria-hidden="true">A</span>
+                <span class="content-answer">
+                  콘텐츠의 유형과 복잡도에 따라 다르지만, 단일 제품 기준 2~3주 내외, AR/VR 프로젝트는 4주 이상이 소요되는 경우가 많습니다. <br />
+                  초기 상담 시 구체적인 제작 스펙을 파악해 맞춤 일정안을 제안드립니다.
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="contents-box">
+            <div class="contents-header" tabindex="0" role="button" aria-expanded="false" aria-controls="contents6">
+              <p>
+                <span aria-hidden="true">Q</span>
+                <span>3D 서비스를 처음 도입하는데, 내부 기술이 없어도 가능한가요?</span>
+              </p>
+              <span class="header-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.33335 9.33334L22.6667 22.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.6667 9.33334V22.6667H9.33335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="sr-only">답변 보기</span>
+            </div>
+            <div class="contents" id="contents6" hidden>
+              <p>
+                <span aria-hidden="true">A</span>
+                <span class="content-answer">
+                  물론입니다. 기획부터 모델링, UI 설계, 연동 개발까지 원스톱으로 지원해드리며, 관리자 가이드를 통해 유지보수도 쉽게 하실 수 있습니다. <br />
+                  기술적 인력이 없어도 전혀 부담 없이 시작하실 수 있습니다.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
