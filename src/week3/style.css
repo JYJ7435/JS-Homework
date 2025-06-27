@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #a1a0a0;
+}
+
+/* 스크롤바 전체 */
+::-webkit-scrollbar {
+  width: 0.5rem; /* 세로 스크롤바 너비 */
+}
+
+/* 스크롤바 트랙(배경) */
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 0.25rem;
+}
+
+/* 스크롤바 핸들(스크롤 하는 막대) */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 0.25rem;
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+figure,
+button {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.sr-only {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.carousel {
+  position: relative;
+  max-inline-size: 78.6875rem;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  --width: 41.25rem;
+
+  overflow: hidden;
+  inline-size: 100%;
+  block-size: 100%;
+
+  .carousel-wrapper {
+    display: flex;
+    gap: 5.125rem;
+    transition: transform 0.5s ease;
+    transform: translateX(calc((100% - var(--width)) / 2));
+  }
+
+  .carousel-content {
+    inline-size: var(--width);
+    flex-shrink: 0;
+    word-break: keep-all;
+    background-color: #111;
+    position: relative;
+
+    .blur {
+      pointer-events: none;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    .blur.active {
+      position: absolute;
+      top: 0;
+      left: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      background-color: #111;
+      z-index: 10;
+      pointer-events: auto;
+      opacity: 0.6;
+    }
+
+    .content-description {
+      color: #fff;
+      padding: 40px;
+
+      h2 {
+        font-weight: 300;
+        font-size: 1.125rem;
+        margin-block-end: 1rem;
+      }
+
+      h3 {
+        font-weight: 300;
+        font-size: 1.625rem;
+        margin-block-end: 1.3125rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+        word-wrap: break-word;
+        overflow-y: auto;
+        line-height: 2.2;
+        max-height: 5.9375rem;
+        padding-inline: 0.3125rem;
+        box-sizing: content-box;
+      }
+
+      .content-link {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        min-height: 4.375rem;
+
+        a {
+          display: flex;
+          align-items: center;
+          font-size: 0.875rem;
+          color: #fff;
+          gap: 0.3125rem;
+
+          span {
+            display: inline-block;
+            position: relative;
+            border-bottom: 1px solid #fff;
+
+            &::after {
+              position: absolute;
+              display: block;
+              content: '';
+              inline-size: 0;
+              top: 100%;
+              left: 0;
+              height: 1px;
+              background-color: #fff;
+              transition: inline-size 0.4s ease;
+            }
+          }
+          &:hover span {
+            border-color: transparent;
+          }
+
+          &:hover span::after {
+            inline-size: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.carousel-button {
+  border: 0;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 20;
+
+  &.prev {
+    left: 0;
+  }
+
+  &.next {
+    right: 0;
+  }
+
+  & svg {
+    display: block;
+  }
+}
+
+.carousel-indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-block-start: 1.5rem;
+
+  button[type='button'] {
+    cursor: pointer;
+  }
+}
+
+.indicator {
+  position: relative;
+  inline-size: 2rem;
+  block-size: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 0;
+  border-color: transparent;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  inline-size: 10rem;
+}
+
+.indicator .progress {
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 3s linear;
+}
+
+.indicator.active .progress.active {
+  background-color: #fff;
+  transform: scaleX(1);
+}
+
+.play-button-group {
+  position: relative;
+  inline-size: 1rem;
+  block-size: 1rem;
+  margin-inline-start: 0.875rem;
+}
+
+.play-button {
+  border: 0;
+  background-color: transparent;
+  inline-size: inherit;
+  block-size: inherit;
+
+  & svg {
+    display: block;
+  }
+
+  &.play {
+    display: none;
+  }
+
+  &.stop {
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+}
