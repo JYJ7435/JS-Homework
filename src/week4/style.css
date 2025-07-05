@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.section-1 {
+  position: relative;
+  top: 0;
+  inline-size: 100%;
+  block-size: 400vh;
+
+  .video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    inline-size: 100vw;
+    block-size: 100vh;
+    z-index: -1;
+
+    video {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .section-inner {
+    inline-size: 100%;
+    block-size: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  & .fashiontown-banner-text {
+    display: flex;
+    inline-size: 100%;
+    font-size: 18.75rem;
+    color: #fff;
+    opacity: 0;
+    transform: translateX(10%);
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease,
+      scale 0.3s ease;
+
+    span {
+      white-space: pre;
+    }
+
+    .flip {
+      position: relative;
+      inline-size: 0;
+      flex-shrink: 0;
+      overflow: hidden;
+      text-align: center;
+      transition:
+        inline-size 0.4s ease,
+        border 0.4s ease;
+      margin-inline-end: 2.5rem;
+    }
+
+    .flip-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      transition: transform 0.3s ease;
+
+      p {
+        inline-size: 100%;
+        block-size: 100%;
+      }
+    }
+  }
+
+  & .fashiontown-logo {
+    inline-size: 100%;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & svg {
+      inline-size: 100%;
+      block-size: 100%;
+    }
+
+    .letter {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    @media screen and (width <= 64rem) {
+      bottom: 0px;
+    }
+  }
+}
+
+.title {
+  font-size: 4rem;
+}
+
+.section-2 {
+  background: #87ceeb;
+  block-size: 100vh;
+}
+.section-3 {
+  background: #ffebcd;
+  block-size: 100vh;
+}
